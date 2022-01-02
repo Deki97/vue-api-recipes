@@ -1,12 +1,7 @@
 <template>
     <main>
         <div class="container">
-            <Recipe />
-            <Recipe />
-            <Recipe />
-            <Recipe />
-            <Recipe />
-            <Recipe />
+            <Recipe v-for="(item, index) in recipes" :key="index" :objectRecipe="item"/>
         </div>
     </main>
 </template>

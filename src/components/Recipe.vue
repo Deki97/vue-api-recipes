@@ -1,19 +1,19 @@
 <template>
     <div class="recipe">
         <div class="image">
-            <img src="https://plantoeat.s3.amazonaws.com/recipes/16687583/d99596b7acb8758e6d878ada11c36bd83c704cf4-original.jpg?1535321755" alt="Nome Ricetta">
+            <img :src="objectRecipe.photoUrl" :alt="objectRecipe.title">
         </div>
 
         <div class="text">
             <div class="title">
-                <h2>California Roll Sushi Bowls</h2>
+                <h2>{{ objectRecipe.title }}</h2>
             </div>
 
             <div class="ingredients">
                 <span>
                     Ingredients:
                 </span> 
-                2 cups dry California Calrose Sushi Rice\n5 Tbsp rice vinegar, (, divided)\n2 Tbsp granulated sugar\n1/2 tsp salt\n1/4 cup light mayonnaise\n1 1/2 Tbsp sriracha\n1/4 cup low-sodium soy sauce\n10 oz imitation crab, or lump crabmeat, (, torn or chopped into small bite size pieces)\n1 1/2 cups diced English cucumber\n3/4 cup roughly chopped matchstick carrots\n1 nori sheet (, chopped or crumbled into small pieces (add more if you'd like))\n1 1/2 Tbsp chopped pickled sushi ginger\n1 large avocado, (, peeled and diced)\nBlack and toasted sesame seeds, (, for garnish)
+                {{ objectRecipe.ingredients }}
             </div>
 
             <div class="info">
@@ -21,28 +21,28 @@
                     <span>
                         Preparation Time:
                     </span> 
-                    15 minutes
+                    {{ objectRecipe.prepTime}}
                 </div>
                 
                 <div class="cooking-time">
                     <span>
                         Cooking Time:
                     </span>
-                    25 minutes
+                    {{ objectRecipe.cookTime }}
                 </div>
                 
                 <div class="total-time">
                     <span>
                         Total Time:
                     </span>
-                    40 minutes
+                    {{ objectRecipe.totalTime }}
                 </div>
                 
                 <div class="servings">
                     <span>
                         Servings:
                     </span>
-                    5
+                    {{ objectRecipe.servings }}
                 </div>
             </div>
         </div>
@@ -68,10 +68,10 @@ export default {
     margin: 20px 0;
 
     .image {
-        min-width: 300px;
+        min-width: 280px;
 
         img {
-            height: 300px;
+            height: 280px;
             object-fit: cover;
             object-position: center;
             cursor: pointer;
