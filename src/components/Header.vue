@@ -1,11 +1,13 @@
 <template>
     <header>
-        <div class="logo">
-            <img src="../assets/img/cooking-mama-logo.png" alt="Cooking Mama Logo">
-        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/img/cooking-mama-logo.png" alt="Cooking Mama Logo">
+            </div>
 
-        <div class="title">
-            <h1>Recipes API</h1>
+            <div class="title">
+                <h1>Recipes API</h1>
+            </div>
         </div>
     </header>
 </template>
@@ -23,10 +25,13 @@ export default {
 
 header {
     background-color: $primary-color;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
+    
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .logo {
         width: 180px;
     }
